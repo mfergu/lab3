@@ -8,7 +8,8 @@ class Recursion
 {
   public:
     Recursion();
-    Recursion(char* ); //read a file into the array
+    Recursion(const char* ); //read a file into the array
+    void printArr(); //displays the 2-d arr
     ~Recursion();
   private:
     int intArr[10][10]; //int array to hold read in

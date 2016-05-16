@@ -4,7 +4,7 @@ using namespace std;
 Recursion::Recursion()
 {}
 
-Recursion::Recursion( char* fileName)
+Recursion::Recursion( const char* fileName)
 {
   fstream inFile; 
   inFile.open(fileName, ios::in); 
@@ -20,14 +20,35 @@ Recursion::Recursion( char* fileName)
     while(x != 0)
     {
       intArr[x][y] = line[x]; 
+      cout << intArr[x][y] << " "; 
       ++x;
     }
+  cout << endl;
   ++y;
   }
 }
 
+void Recursion::printArr()
+{
+  cout << endl;
+
+  int x = 0, y = 0;
+
+  while(y!=10)
+  {
+    while(x != 10)
+    {
+      cout << static_cast<char>(intArr[x][y]) << " "; 
+      ++x;
+    }
+  ++y;
+  cout << endl;
+  }
+  cout << endl;
+}
+
 Recursion::~Recursion()
 {
-  cout << "desctructor\n";
+  cout << "destructor\n";
 }
 
