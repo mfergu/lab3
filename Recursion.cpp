@@ -31,10 +31,10 @@ Recursion::Recursion( const char* fileName)
       }
 
       boolArr[x][y] = false;
-      cout << intArr[x][y] << ' ';
+//      cout << intArr[x][y] << ' ';
     }
   ++y;
-  cout << endl;
+//  cout << endl;
   }
 }
 
@@ -54,7 +54,7 @@ void Recursion::printArr()
 
 void Recursion::islandFinder(int x, int y)
 {
-  cout << "(" <<  x << "," << y << ")";
+  cout << "(" <<  y << "," << x << "), ";
   boolArr[x][y] = 1;
   if(( intArr[x][y-1] == 1) && (boolArr[x][y-1] == 0) &&\
     (y-1 > 0))
@@ -81,8 +81,9 @@ void Recursion::printGroups()
     {
       if(intArr[x][y] == 1 && boolArr[x][y] == 0)
       {
-        cout << "group"<< group << ":" ;
+        cout << "group"<< group << ":  " ;
         islandFinder(x, y);  
+        cout << endl;
         
         group++;
       }
@@ -92,7 +93,5 @@ void Recursion::printGroups()
   
 Recursion::~Recursion()
 {
-  
-  cout << "\ndestructor\n";
 }
 

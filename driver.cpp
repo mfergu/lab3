@@ -4,9 +4,8 @@ using namespace std;
 int main () //int argc, char* argv
 {
   Recursion A("sample.txt");
-  A.printArr();
-  cout << "\n\n recursive algo\n";
   A.printGroups();
+  A.printArr();
   
   return 0;
 }
